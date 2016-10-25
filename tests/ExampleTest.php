@@ -8,13 +8,13 @@ class ExampleTest extends TestCase
 {
     /**
      * A basic functional test example.
-     *
+     * @group failing
      * @return void
      */
     public function testBasicExample()
     {
         // /todos-> Mostra els todos de l'usuari logat
-        $user = factory(\App\User::class);
+        $user = factory(\App\User::class)->make();
         $task = factory(\App\Task::class);
 
         $user->addTask($task);
